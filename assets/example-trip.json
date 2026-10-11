@@ -1,0 +1,664 @@
+{
+  "title": "Kyoto",
+  "page_title": "Kyoto, March 2027",
+  "slug": "kyoto-example",
+  "city": "Kyoto",
+  "local_name": "京都 · 弥生",
+  "eyebrow": "Five days · March 2027",
+  "dates_text": "Friday 12 — Tuesday 16 March",
+  "description": "Sam & Alex in Kyoto, 12–16 March 2027: day plans, maps, bookings and prices in USD.",
+  "facts": [
+    {
+      "label": "Travellers",
+      "value": "Sam & Alex"
+    },
+    {
+      "label": "Base",
+      "value": "Ace Hotel Kyoto",
+      "detail": "Shin-Puh-Kan · above Karasuma Oike Station"
+    },
+    {
+      "label": "Arrive",
+      "value": "Fri 12 · 14:30",
+      "detail": "Kansai (KIX)"
+    },
+    {
+      "label": "Depart",
+      "value": "Tue 16 · 18:00",
+      "detail": "Kansai (KIX)"
+    },
+    {
+      "label": "Currency",
+      "value": "Japanese yen (¥)",
+      "detail": "$1 ≈ ¥156 · ¥1,000 ≈ $6.40",
+      "wide": true
+    }
+  ],
+  "base_id": "hotel",
+  "currency": {
+    "code": "JPY",
+    "name": "Japanese yen",
+    "symbol": "¥",
+    "rate": 156,
+    "home": "US dollars",
+    "home_symbol": "$",
+    "rate_date": "17 Sep 2026 (latest quote found 11 Oct 2026)"
+  },
+  "week_title": "One base, one direction each day",
+  "week_intro": "Every day starts and ends at Ace Hotel, right on the subway hub. Mornings start early, and most afternoons have a hotel break from about 3pm (earlier on sunrise day).",
+  "where_title": "What's where from Ace Hotel",
+  "areas": [
+    {
+      "id": "central",
+      "name": "Downtown · Karasuma to Kawaramachi",
+      "short": "Downtown",
+      "local": "中京",
+      "far": "Home base · on foot",
+      "color": "#6b655c",
+      "desc": "Where you sleep. Covered shopping arcades, Nishiki Market, Weekenders and Ippodo are all a 5–15 minute walk from the hotel.",
+      "zones": [
+        {
+          "name": "Around the hotel",
+          "places": [
+            "hotel",
+            "ippodo"
+          ]
+        },
+        {
+          "name": "Nishiki and Shijō",
+          "places": [
+            "weekenders",
+            "nishiki",
+            "pontocho"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fushimi",
+      "name": "Fushimi Inari",
+      "short": "Fushimi",
+      "local": "伏見稲荷",
+      "far": "15–20 min by taxi · Keihan Line back",
+      "color": "#a8664f",
+      "desc": "The torii-tunnel shrine on the south side of town. Open all night and free, so sunrise is the time to go."
+    },
+    {
+      "id": "higashiyama",
+      "name": "Gion · Higashiyama",
+      "short": "Higashiyama",
+      "local": "祇園・東山",
+      "far": "15 min by taxi",
+      "color": "#8a6f7d",
+      "desc": "The old east side under the hills: Yasaka Shrine, Maruyama Park and Kikunoi."
+    },
+    {
+      "id": "arashiyama",
+      "name": "Arashiyama · Sagano",
+      "short": "Arashiyama",
+      "local": "嵐山・嵯峨野",
+      "far": "30 min · Tōzai Line + Randen, or taxi",
+      "color": "#76846f",
+      "desc": "Bamboo, the river and Zen gardens on the far west edge. Quiet before 8am, packed by 10."
+    },
+    {
+      "id": "uji",
+      "name": "Uji",
+      "local": "宇治",
+      "far": "45 min · Karasuma Line + JR Nara Line",
+      "color": "#8b8a5c",
+      "desc": "Kyoto's tea town, south of the city. Byōdō-in and the old matcha houses on the river."
+    }
+  ],
+  "places": {
+    "hotel": {
+      "name": "Ace Hotel Kyoto",
+      "area": "central",
+      "type": "Stay",
+      "lat": 35.00963,
+      "lng": 135.76046,
+      "q": "Ace Hotel Kyoto",
+      "note": "Shin-Puh-Kan, 245-2 Kurumaya-chō, Nakagyō · Karasuma Oike Station exit 5 · sources list two street numbers, use the hotel's own"
+    },
+    "weekenders": {
+      "name": "Weekenders Coffee Tominokoji",
+      "area": "central",
+      "type": "Coffee",
+      "lat": 35.00678,
+      "lng": 135.76448,
+      "q": "Weekenders Coffee Tominokoji Kyoto",
+      "note": "560 Honeya-chō, behind a parking lot · 7:30–18:00 · closed Wednesdays · standing room, takeaway mostly"
+    },
+    "nishiki": {
+      "name": "Nishiki Market",
+      "area": "central",
+      "type": "Dine",
+      "lat": 35.00502,
+      "lng": 135.76557,
+      "q": "Nishiki Market Kyoto",
+      "note": "Nishikikōji-dōri · shops roughly 10:00–17:00, each sets its own hours · many close Wednesdays, some Sundays · no eating while walking"
+    },
+    "ippodo": {
+      "name": "Ippodo Tea, Kyoto main store",
+      "area": "central",
+      "type": "Tea",
+      "lat": 35.01446,
+      "lng": 135.76736,
+      "q": "Ippodo Tea Kyoto Main Store Teramachi",
+      "note": "Teramachi-dōri at Nijō · shop and Kaboku tearoom 10:00–17:00, last call 16:30 · no reservations · tearoom closed 2nd Wednesday"
+    },
+    "pontocho": {
+      "name": "Pontochō",
+      "area": "central",
+      "type": "Dine",
+      "lat": 35.00425,
+      "lng": 135.77121,
+      "q": "Pontocho Alley Kyoto",
+      "note": "Lantern-lit alley by the Kamo River · small restaurants, many with menus posted outside"
+    },
+    "fushimi": {
+      "name": "Fushimi Inari Taisha",
+      "area": "fushimi",
+      "type": "See",
+      "lat": 34.96752,
+      "lng": 135.77971,
+      "q": "Fushimi Inari Taisha",
+      "note": "68 Yabunouchi-chō · open 24 hours · free · Yotsutsuji viewpoint is ~45 min up"
+    },
+    "yasaka": {
+      "name": "Yasaka Shrine · Maruyama Park",
+      "area": "higashiyama",
+      "type": "See",
+      "lat": 35.0036,
+      "lng": 135.77826,
+      "q": "Yasaka Shrine Kyoto",
+      "note": "East end of Shijō-dōri · open 24 hours · free"
+    },
+    "kikunoi": {
+      "name": "Kikunoi Honten",
+      "area": "higashiyama",
+      "type": "Dine",
+      "lat": 35.0013,
+      "lng": 135.781,
+      "q": "菊乃井 本店 京都",
+      "note": "459 Shimokawara-chō, Higashiyama · dinner 17:00, last order 19:30 · closed 1st and 3rd Tuesdays · +81-75-561-0015",
+      "approx": true
+    },
+    "bamboo": {
+      "name": "Arashiyama Bamboo Grove",
+      "area": "arashiyama",
+      "type": "See",
+      "lat": 35.01674,
+      "lng": 135.67115,
+      "q": "Arashiyama Bamboo Grove",
+      "note": "Open 24 hours · free · go before 8"
+    },
+    "tenryuji": {
+      "name": "Tenryū-ji garden",
+      "area": "arashiyama",
+      "type": "See",
+      "lat": 35.01622,
+      "lng": 135.67294,
+      "q": "Tenryu-ji Kyoto",
+      "note": "8:30–17:00, last entry 16:50 · garden ¥500 · north gate opens onto the bamboo path"
+    },
+    "okochi": {
+      "name": "Ōkōchi Sansō",
+      "area": "arashiyama",
+      "type": "Tea",
+      "lat": 35.01663,
+      "lng": 135.66959,
+      "q": "Okochi Sanso Villa",
+      "note": "Top of the bamboo path · 9:00–17:00 · ¥1,000 incl. matcha and a sweet"
+    },
+    "byodoin": {
+      "name": "Byōdō-in",
+      "area": "uji",
+      "type": "See",
+      "lat": 34.8895,
+      "lng": 135.80745,
+      "q": "Byodoin Temple Uji",
+      "note": "Uji-renge 116 · grounds 8:30–17:30 · ¥700, Phoenix Hall interior +¥300 by timed ticket from 9:00"
+    },
+    "tokichi": {
+      "name": "Nakamura Tokichi Honten",
+      "area": "uji",
+      "type": "Tea",
+      "lat": 34.88932,
+      "lng": 135.8016,
+      "q": "中村藤吉本店 宇治",
+      "note": "By JR Uji Station · café from 10:00 or 11:00 (sources differ), last order 16:30 · numbered-ticket queue, no bookings"
+    }
+  },
+  "reservations": {
+    "title": "One table matters most",
+    "intro": "Kikunoi on Sunday 14 is the trip. Everything else is walk-in. Booking times are Japan time, so check the difference from home.",
+    "priority": [
+      {
+        "id": "kikunoi",
+        "tag": "Priority · Sun 14",
+        "time": "17:30",
+        "title": "Kikunoi Honten",
+        "meta": "Kaiseki, 2 people · menus listed at ¥22,000–77,000 pp plus ~15% service (sources vary) · 459 Shimokawara-chō, Higashiyama. Open Sunday; closed 1st and 3rd Tuesdays.",
+        "opens": "Release window unconfirmed · request now on MY CONCIERGE or TABLEALL"
+      }
+    ],
+    "walkin": [
+      {
+        "id": "fushimi-w",
+        "tag": "Priority · Sat 13",
+        "time": "Gate ~05:50",
+        "title": "Fushimi Inari at sunrise",
+        "meta": "No tickets, open all night. Taxi from the hotel at 05:30. Sunrise is about 06:10; climb to Yotsutsuji for the view."
+      },
+      {
+        "id": "weekenders-w",
+        "tag": "Priority · Sat 13",
+        "time": "08:45",
+        "title": "Weekenders Coffee",
+        "meta": "No reservations, opens 7:30, closed Wednesdays. Backup slot: Tue 16 morning."
+      }
+    ],
+    "prep_title": "This week",
+    "prep": [
+      "Check Kikunoi Honten's listing on MY CONCIERGE and TABLEALL (links on kikunoi.jp/en) for Sun 14 March, 2 people, and note the release date and fee.",
+      "If neither shows March yet, phone +81-75-561-0015 (Japan daytime is evening or overnight in the Americas) or ask Ace Hotel's concierge once your room is booked.",
+      "Pick the course price you're comfortable with before you book; the cheapest menu may not be offered on the booking platforms.",
+      "Buy Haruka tickets on JR West's site closer to the date (smartphone QR voucher)."
+    ],
+    "others": [
+      {
+        "id": "haruka",
+        "title": "Haruka Express · Fri 12 in, Tue 16 out",
+        "when": "Any time · JR West online",
+        "desc": "KIX ⇄ Kyoto Station, about 75 min. Around ¥3,000–3,600 each way per person; fares vary by source."
+      }
+    ],
+    "costs": [
+      {
+        "label": "Kikunoi Honten (est. ¥38,000 + service)",
+        "pp": 44000
+      },
+      {
+        "label": "Haruka Express, both ways",
+        "pp": 7200
+      },
+      {
+        "label": "Ōkōchi Sansō with matcha",
+        "pp": 1000
+      },
+      {
+        "label": "Byōdō-in incl. Phoenix Hall",
+        "pp": 1000
+      },
+      {
+        "label": "Tenryū-ji garden",
+        "pp": 500
+      }
+    ],
+    "party": 2,
+    "confirmed": {}
+  },
+  "deadlines": [
+    {
+      "ids": [
+        "kikunoi"
+      ],
+      "date": "2026-12-01",
+      "text": "Check Kikunoi's booking window and request Sun 14 March for 2."
+    },
+    {
+      "ids": [
+        "kikunoi"
+      ],
+      "date": "2027-02-12",
+      "text": "One month out. If Kikunoi isn't confirmed, phone or ask the hotel concierge."
+    },
+    {
+      "ids": [],
+      "date": "2027-03-11",
+      "text": "Flights out."
+    }
+  ],
+  "days": [
+    {
+      "id": "d12",
+      "date": "2027-03-12",
+      "dow": "Friday",
+      "label": "Arrival",
+      "headline": "Arrival",
+      "summary": "KIX 14:30 · Haruka · check in",
+      "title": "Land and settle in",
+      "intro": "A soft landing. Straight to Kyoto on the Haruka, check in, and eat close to the hotel. Tomorrow starts before dawn.",
+      "lines": [
+        {
+          "name": "Haruka, KIX to Kyoto, ~75 min",
+          "color": "#c8553d"
+        },
+        {
+          "name": "Karasuma Line to Karasuma Oike, 6 min",
+          "color": "#3a9a5b"
+        }
+      ],
+      "items": [
+        {
+          "time": "14:30",
+          "title": "Land at Kansai (KIX)",
+          "text": "Allow about an hour for immigration and bags."
+        },
+        {
+          "time": "15:45",
+          "title": "Haruka to Kyoto Station",
+          "text": "About 75 minutes. Trains run roughly every 30 minutes."
+        },
+        {
+          "time": "17:15",
+          "title": "Karasuma Line to Karasuma Oike",
+          "text": "Two stops north, 6 minutes. The hotel is above exit 5."
+        },
+        {
+          "time": "17:45",
+          "title": "Check in",
+          "place": "hotel",
+          "text": "Ace Hotel Kyoto."
+        },
+        {
+          "time": "19:00",
+          "title": "Easy dinner nearby",
+          "text": "Shin-Puh-Kan's ground-floor restaurants or anywhere within a few blocks. Early night."
+        }
+      ]
+    },
+    {
+      "id": "d13",
+      "date": "2027-03-13",
+      "dow": "Saturday",
+      "area": "central",
+      "label": "Fushimi → Downtown",
+      "headline": "Sunrise shrine, then Downtown",
+      "summary": "Fushimi Inari · Weekenders · Nishiki · Ippodo · Pontochō",
+      "title": "Torii at dawn, coffee and market by mid-morning",
+      "intro": "Two of your three must-happens on one day. You beat the crowds to Fushimi Inari, then take the Keihan back into town for Weekenders and Nishiki while they're quiet. Because of the 5:30 start, the hotel break comes early, at 13:00.",
+      "lines": [
+        {
+          "name": "Taxi to Fushimi Inari, 15–20 min",
+          "color": "#6b655c"
+        },
+        {
+          "name": "Keihan Line to Gion-Shijō, 8 min",
+          "color": "#1f4e8c"
+        }
+      ],
+      "map_skip": [
+        "fushimi"
+      ],
+      "map_note": "Map shows Downtown. Stop 1, Fushimi Inari, is 15–20 min south by taxi.",
+      "items": [
+        {
+          "time": "05:30",
+          "title": "Taxi from the hotel",
+          "text": "Hotel front desk can call one. About ¥3,000."
+        },
+        {
+          "time": "05:50",
+          "title": "Fushimi Inari Taisha",
+          "place": "fushimi",
+          "res": "priority",
+          "badge": "Must-happen · sunrise",
+          "text": "Sunrise about 06:10. Walk up through the Senbon Torii to Yotsutsuji (~45 min), then back down. Free, open all night."
+        },
+        {
+          "time": "08:15",
+          "title": "Keihan Line to Gion-Shijō",
+          "text": "From Fushimi-Inari Station, 8 minutes. Walk west along Shijō, about 15 minutes."
+        },
+        {
+          "time": "08:45",
+          "title": "Weekenders Coffee Tominokoji",
+          "place": "weekenders",
+          "res": "priority",
+          "badge": "Must-happen · walk-in",
+          "text": "Opens 7:30. Small, mostly standing; take it to go if it's full."
+        },
+        {
+          "time": "10:00",
+          "title": "Nishiki Market",
+          "place": "nishiki",
+          "text": "Saturday, so most stalls are open. Graze for lunch: tamagoyaki, grilled skewers, tofu doughnuts. Eat at each stall, not while walking."
+        },
+        {
+          "time": "11:45",
+          "title": "Ippodo Kaboku tearoom",
+          "place": "ippodo",
+          "text": "Matcha prepared at your table with a seasonal sweet. No reservations; a waitlist forms after lunch. Buy tea to take home here or on Tuesday."
+        },
+        {
+          "time": "13:00",
+          "title": "Hotel break",
+          "place": "hotel",
+          "text": "Seven minutes' walk. Nap; you've been up since five."
+        },
+        {
+          "time": "18:00",
+          "title": "Dinner in Pontochō",
+          "place": "pontocho",
+          "text": "Walk the alley and pick a place with a posted menu. Skip ones with no prices outside."
+        }
+      ]
+    },
+    {
+      "id": "d14",
+      "date": "2027-03-14",
+      "dow": "Sunday",
+      "area": "arashiyama",
+      "label": "Arashiyama → Kikunoi",
+      "headline": "Bamboo, then Kikunoi",
+      "summary": "Bamboo Grove · Tenryū-ji · Ōkōchi Sansō · Yasaka · Kikunoi Honten",
+      "title": "West at dawn, east for dinner",
+      "intro": "The day is built around Kikunoi. Arashiyama is done by late morning, before the Sunday crowds peak, and you're back at the hotel early to rest before the big dinner. The walk through Yasaka Shrine leads you straight to the door.",
+      "lines": [
+        {
+          "name": "Taxi to Arashiyama, ~30 min",
+          "color": "#6b655c"
+        },
+        {
+          "name": "Randen + Tōzai Line back, ~35 min",
+          "color": "#7a3b69"
+        },
+        {
+          "name": "Taxi to Yasaka Shrine, 15 min",
+          "color": "#6b655c"
+        }
+      ],
+      "map_skip": [
+        "hotel",
+        "yasaka",
+        "kikunoi"
+      ],
+      "map_note": "Map zooms to Arashiyama. The hotel is 30 min east; stops 4 and 5 are on the east side, 15 min from the hotel by taxi.",
+      "items": [
+        {
+          "time": "06:45",
+          "title": "Taxi to Arashiyama",
+          "text": "About 30 minutes and ¥5,000 or so. The trains are slower at this hour."
+        },
+        {
+          "time": "07:15",
+          "title": "Arashiyama Bamboo Grove",
+          "place": "bamboo",
+          "text": "Nearly empty before 8. Walk the full path, slowly."
+        },
+        {
+          "time": "08:30",
+          "title": "Tenryū-ji garden",
+          "place": "tenryuji",
+          "text": "Opens 8:30. ¥500 for the garden. Enter or leave by the north gate onto the bamboo path."
+        },
+        {
+          "time": "09:30",
+          "title": "Ōkōchi Sansō",
+          "place": "okochi",
+          "text": "Hillside villa gardens with views over the city. The ¥1,000 entry includes a bowl of matcha and a sweet at the end."
+        },
+        {
+          "time": "11:00",
+          "title": "Back toward town",
+          "text": "Randen from Arashiyama to Randen-Tenjingawa, then Tōzai Line to Karasuma Oike. About 35 minutes. Eat a light lunch on the way; dinner is long."
+        },
+        {
+          "time": "12:30",
+          "title": "Hotel break",
+          "place": "hotel",
+          "text": "Rest and change. No dress code is published; smart casual is the safe choice."
+        },
+        {
+          "time": "16:30",
+          "title": "Yasaka Shrine and Maruyama Park",
+          "place": "yasaka",
+          "text": "Taxi 15 minutes. Walk through the shrine and the park; Kikunoi is about 5 minutes up the lane."
+        },
+        {
+          "time": "17:30",
+          "title": "Kikunoi Honten",
+          "place": "kikunoi",
+          "res": "priority",
+          "badge": "Top priority · book first",
+          "text": "Kaiseki for 2. Arrive 5–10 minutes early. Time to be confirmed when you book; dinner seatings start at 17:00. Taxi home, 15 minutes."
+        }
+      ]
+    },
+    {
+      "id": "d15",
+      "date": "2027-03-15",
+      "dow": "Monday",
+      "area": "uji",
+      "label": "Uji",
+      "headline": "Uji, the tea town",
+      "summary": "Byōdō-in · Nakamura Tokichi",
+      "title": "A morning for matcha",
+      "intro": "Your 'good matcha' day. Uji grows the tea, so it's the place for it. Byōdō-in opens early, the tea house queue is shortest at opening, and you're back by early afternoon.",
+      "lines": [
+        {
+          "name": "Karasuma Line to Kyoto, 6 min",
+          "color": "#3a9a5b"
+        },
+        {
+          "name": "JR Nara Line to Uji, 17–30 min",
+          "color": "#9a6b3f"
+        }
+      ],
+      "items": [
+        {
+          "time": "08:00",
+          "title": "Karasuma Line, then JR Nara Line to Uji",
+          "text": "Change at Kyoto Station. Take a Rapid if one is leaving."
+        },
+        {
+          "time": "08:45",
+          "title": "Byōdō-in",
+          "place": "byodoin",
+          "text": "Grounds open 8:30. Get a Phoenix Hall interior ticket as soon as they start selling at 9:00 (+¥300, timed, first come)."
+        },
+        {
+          "time": "10:30",
+          "title": "Nakamura Tokichi Honten",
+          "place": "tokichi",
+          "text": "Take a queue ticket on arrival. Matcha, matcha soba, and the jelly parfait. Opening time is listed as 10:00 or 11:00; check before you go."
+        },
+        {
+          "time": "12:30",
+          "title": "Walk the Uji River",
+          "text": "The Uji Bridge and the riverbank tea shops, then back to JR Uji Station."
+        },
+        {
+          "time": "14:30",
+          "title": "Hotel break",
+          "place": "hotel",
+          "text": "Afternoon off."
+        },
+        {
+          "time": "18:30",
+          "title": "Dinner, your pick",
+          "text": "Unplanned on purpose. Downtown is on foot from the hotel."
+        }
+      ],
+      "map_skip": [
+        "hotel"
+      ],
+      "map_note": "Map zooms to Uji. The hotel is 45 min north by subway and JR."
+    },
+    {
+      "id": "d16",
+      "date": "2027-03-16",
+      "dow": "Tuesday",
+      "area": "central",
+      "label": "Departure",
+      "headline": "Last coffee, then home",
+      "summary": "Weekenders · Ippodo · Haruka 14:00",
+      "title": "A slow last morning",
+      "intro": "Weekenders is your backup slot if Saturday didn't happen, and Ippodo is the place to buy tea to take home. Leave the hotel by 13:15 for an 18:00 flight.",
+      "lines": [
+        {
+          "name": "Karasuma Line to Kyoto, 6 min",
+          "color": "#3a9a5b"
+        },
+        {
+          "name": "Haruka to KIX, ~75 min",
+          "color": "#c8553d"
+        }
+      ],
+      "items": [
+        {
+          "time": "09:00",
+          "title": "Weekenders Coffee",
+          "place": "weekenders",
+          "text": "Open Tuesday. A second visit, or the first if Saturday fell through."
+        },
+        {
+          "time": "10:15",
+          "title": "Ippodo Tea, the shop",
+          "place": "ippodo",
+          "text": "Opens 10:00. Matcha tins and hōjicha to take home."
+        },
+        {
+          "time": "11:00",
+          "title": "Check out",
+          "place": "hotel",
+          "text": "Leave bags at the front desk. Lunch nearby."
+        },
+        {
+          "time": "13:15",
+          "title": "Leave for Kyoto Station",
+          "text": "Karasuma Line, 6 minutes."
+        },
+        {
+          "time": "13:45",
+          "title": "Haruka to Kansai (KIX)",
+          "text": "About 75 minutes. Arrives around 15:00, three hours before the flight."
+        },
+        {
+          "time": "18:00",
+          "title": "Fly home"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "title": "Money",
+      "text": "Prices are in yen. $1 ≈ ¥156 (latest quote found, 17 Sep 2026; check again before you go). Carry ¥20,000 or so in cash for market stalls and small shops. No tipping."
+    },
+    {
+      "title": "Getting around",
+      "text": "Load a Suica or ICOCA on your phone's wallet before you fly. It works on the subway, Keihan, Randen and JR. Taxis take cards."
+    },
+    {
+      "title": "Weather",
+      "text": "Mid-March in Kyoto is cool, about 3–13°C (37–55°F). Bring layers for the 5:30 start."
+    },
+    {
+      "title": "Etiquette",
+      "text": "No eating while walking in Nishiki. Don't photograph maiko in Gion. Shoes come off in temple buildings."
+    }
+  ]
+}
