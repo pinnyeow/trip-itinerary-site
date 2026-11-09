@@ -5,7 +5,7 @@
   "city": "Kyoto",
   "local_name": "京都 · 弥生",
   "eyebrow": "Five days · March 2027",
-  "dates_text": "Friday 12 — Tuesday 16 March",
+  "dates_text": "Friday 12 to Tuesday 16 March",
   "description": "Sam & Alex in Kyoto, 12–16 March 2027: day plans, maps, bookings and prices in USD.",
   "facts": [
     {
@@ -121,6 +121,7 @@
       "note": "Shin-Puh-Kan, 245-2 Kurumaya-chō, Nakagyō · Karasuma Oike Station exit 5 · sources list two street numbers, use the hotel's own"
     },
     "weekenders": {
+      "badge": "On our list",
       "name": "Weekenders Coffee Tominokoji",
       "area": "central",
       "type": "Coffee",
@@ -139,6 +140,7 @@
       "note": "Nishikikōji-dōri · shops roughly 10:00–17:00, each sets its own hours · many close Wednesdays, some Sundays · no eating while walking"
     },
     "ippodo": {
+      "badge": "Friends' pick",
       "name": "Ippodo Tea, Kyoto main store",
       "area": "central",
       "type": "Tea",
@@ -660,5 +662,22 @@
       "title": "Etiquette",
       "text": "No eating while walking in Nishiki. Don't photograph maiko in Gion. Shoes come off in temple buildings."
     }
-  ]
+  ],
+  "cards": {
+    "lang": "ja",
+    "food": {
+      "people": [
+        {"who": "Alex", "local": "ピーナッツとごまのアレルギーがあります。ごま油もだめです。", "local2": "醤油、味噌、魚介類は大丈夫です。",
+         "en": "Allergic to peanuts and sesame, including sesame oil. Soy sauce, miso and seafood are fine."},
+        {"who": "Sam", "local": "肉は食べません。", "local2": "魚とだしは大丈夫です。",
+         "en": "Doesn't eat meat. Fish and dashi are fine."}
+      ],
+      "footer": {"local": "シェフにお伝えいただけますか。よろしくお願いします。", "en": "Could you please let the chef know? Thank you."}
+    },
+    "driver": {
+      "local": "エースホテル京都までお願いします。",
+      "local_address": "京都市中京区車屋町245-2 新風館",
+      "en": "Please take us to Ace Hotel Kyoto, Shin-Puh-Kan, 245-2 Kurumayacho, Nakagyo-ku, Kyoto."
+    }
+  }
 }

@@ -34,6 +34,10 @@ Then **ask before you plan, every time, even when the request looks complete**. 
 
 Then a short second round if needed: pace (early starts or slow mornings, an afternoon hotel break), who's travelling (first names as they want them shown), dietary needs, budget, home currency, and **"Do you want me to suggest extra places, or stick to your list?"**
 
+**Dietary needs: get the exact list, both sides.** A word like "shellfish", "seafood" or "vegetarian" covers different foods for different people, and one wrong word on a food card can mean a reaction or a kitchen leaving out things the person can eat. For each person, ask what they can't eat (and how serious it is), then what they *can* eat in the same family: crab but not shrimp, fish but not meat, fish sauce or oyster sauce. Read the list back before you write the card. Don't add advice the travellers didn't ask for ("skip the ham pizza"); they know their own diet.
+
+**How they know each place.** When the user gives you their own list, ask which ones they've been to and loved, which are still on their list, and which came from friends. Those become `badge`s, and they tell the people using the page how much to trust each place.
+
 Use your structured question tool if you have one (for example AskUserQuestion in Claude Code), up to 4 questions per round, with concrete options drawn from what they gave you plus "Other". Otherwise ask in a plain numbered message and wait for the reply. Never choose priorities yourself. Never pull names or preferences from memory of other conversations.
 
 **Don't add places they didn't ask for** unless they said yes to suggestions. Fill gaps with their wish list, or leave the time open ("free afternoon"). When they do want suggestions, mark each one "suggested" in its note so it's clear what came from them and what came from you.
@@ -63,9 +67,17 @@ When sources disagree, say so in the place's note ("listed hours vary, check fir
 - If one stop is far from the rest of the day (an evening dinner across town), keep it in the timeline, add it to `map_skip`, and explain it in `map_note` so the day's map stays readable.
 - **Give each day an intro of 1–3 sentences that explains why it's shaped that way.**
 
+### 3b. Show-this cards
+
+If the travellers don't read the local language, offer two `cards` (see the schema):
+- **A food card** when anyone has an allergy or a diet, in the local language with English underneath: what they can't eat first, then what they can.
+- **A hotel card** with the hotel's name and address in the local script, for taxi drivers.
+
+Write the local text in plain, polite language a waiter or driver would use. If you aren't confident in the language, say so and suggest the travellers ask the hotel to check it.
+
 ### 4. Coordinates
 
-Run `python3 scripts/geocode.py --country <cc> "name" ...`, trying the local-language name and the street address too. Check the matched name, because Nominatim returns same-named places in other cities. Small restaurants often aren't in OpenStreetMap; estimate from the address or the nearest station and set `"approx": true`. Give every place a precise Google Maps `q` (name + branch, or the local-script name). That link is what people tap, so it matters more than pin precision.
+Run `python3 scripts/geocode.py --country <cc> "name" ...`, trying the local-language name and the street address too. Check the matched name, because Nominatim returns same-named places in other cities. Small restaurants often aren't in OpenStreetMap; estimate from the address or the nearest station and set `"approx": true`. Give every place a precise Google Maps `q` (name + branch, or the local-script name). That link is what people tap, so it matters more than pin precision. When the user gave you their own Google Maps link for a place, keep it as `maps_url`. A restaurant's website, booking page or Michelin listing is not a map link; mention it in the note instead, so every place name opens a map.
 
 ### 5. Exchange rate
 
@@ -79,11 +91,13 @@ python3 <skill>/scripts/build.py trip.json out/index.html
 
 Fix every ERROR. Read the WARNs; privacy warnings almost always mean removing something. Check the printed stop order against your plan.
 
+If you have internet access, add `--check-links` once before publishing. It opens every `maps_url` and booking link and reports the dead ones, so the travellers don't find them on the street.
+
 Then take one look at the page at phone width:
 ```bash
 python3 <skill>/scripts/screenshot.py out/index.html shots/ --light
 ```
-It finds Chrome, Chromium, Edge or Playwright's Chromium on macOS, Linux or Windows and writes viewable slices (`shots/part-1.png` ...). View them. Check that the maps loaded, pins aren't piled on top of each other, and text isn't clipped. Fix what you see, then move on; don't loop. If it exits saying no browser was found, skip the visual check and tell the user.
+It finds Chrome, Chromium, Edge or Playwright's Chromium on macOS, Linux or Windows and writes viewable slices (`shots/part-1.png` ...). View them. Check that the maps loaded, pins aren't piled on top of each other, and text isn't clipped. Also look for awkward line breaks: a place name split across two lines, or a single word left alone on the last line of a heading. Shorten the text, or join the words that belong together with a non-breaking space (`\u00a0` in JSON). Fix what you see, then move on; don't loop. If it exits saying no browser was found, skip the visual check and tell the user.
 
 **Privacy:** the page is often published to a public link. Never include booking confirmation codes, e-ticket numbers, frequent-flyer numbers, card details, passport data, full legal names or email addresses, even if the user pasted them. Flight numbers, first names and the hotel name are fine. Tell the user what you left out and why.
 
@@ -103,6 +117,18 @@ Edit `trip.json`, rebuild, and redeploy to the same destination.
 
 - **"We booked X":** add it to `reservations.confirmed` (e.g. `"kikunoi": "Sun 14, 17:30, 2 people"`). It shows ticked and locked for everyone. Per-phone ticks never sync, so this is how both phones see the same status.
 - **Renaming a Surge domain:** deploy to the new name, verify it, then `surge teardown <old>`. Tell the user the old link is gone.
+
+## Writing the page
+
+The page is read on a phone, often while walking, so every line should be quick to read and sound like a person wrote it.
+
+- **Keep the user's voice.** If their notes say "my favourite" or "I haven't been yet", keep that wording. Don't polish it into guidebook prose.
+- **Suggest, don't order.** "Grab is the easiest way around" reads better than "Download Grab now." The travellers decide.
+- **Say the fact, not the feeling.** "Stalls open at 6pm along the main road" beats "a vibrant slice of local life." If a line could appear unchanged in any guide to any city, cut it or make it specific.
+- **Plain words and short sentences.** Use "use" rather than "utilize", "free" rather than "complimentary". Split any sentence that makes the reader go back.
+- **No AI tells.** No em dashes (use a full stop or a comma; en dashes in ranges like 8:00–11:00 are fine), no "not just X, but Y", no "nestled", "hidden gem", "vibrant", "seamless" or "elevate", no forced lists of three, no "from street food to fine dining" ranges, no decorative emoji.
+- **One thing per tip.** If a note covers two topics (cash and tipping), make it two notes.
+- **Cut what the travellers already know** and anything they won't act on.
 
 ## Reply to the user
 
