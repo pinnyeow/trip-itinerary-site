@@ -13,12 +13,15 @@ Give your agent whatever you have: a spreadsheet planner, a PDF, booking emails,
 - **Places grouped by neighbourhood**, with travel time from your hotel, so you can see what's near what.
 - **A reservations section** with your priority bookings first, the date each one opens, a countdown to the next one, and tick boxes.
 - **Local prices with your home currency** next to every one, at a dated exchange rate.
+- **Show-this cards** in the local language: a food card for allergies and diets (what each person can't eat and what they can), and a hotel card for taxi drivers.
+- **Badges** for how you know each place: "My favourite", "On my list", "Friends' pick".
 - **A Japandi design** (linen, charcoal, hairline rules) that follows your phone's light or dark mode.
 
 ## How it behaves
 
 - **It asks before it plans.** Your hotel, your list of places, which ones are must-happens, and what's already booked. It never picks your priorities or adds places you didn't ask for, unless you ask it to suggest some.
 - **It checks facts.** Opening hours on your actual days, closed days, branches that have shut, how and when bookings open. It flags anything that clashes with your plan, such as a ticket booked for a day the museum is closed, rather than quietly changing it.
+- **It checks links.** Every place opens Google Maps, and an optional build step opens each link to catch dead ones.
 - **It keeps private details off the page.** Confirmation codes, e-ticket numbers, card details and personal emails are left out, because these pages often end up on a public link.
 - **It asks where to publish:** a local file, [Surge](https://surge.sh), or whatever hosting your agent can use.
 

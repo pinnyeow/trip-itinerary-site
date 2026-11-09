@@ -17,7 +17,7 @@ home-currency amount automatically wherever it sees the trip's `currency.symbol`
 | `city` | no | Appended to Google Maps searches when a place has no `q` |
 | `local_name` | no | Name in the local script (`"京都"`, `"서울"`). Shown vertically on the cover. Omit for Latin-script cities |
 | `eyebrow` | no | Small line above the title, e.g. `"Five days · March 2027"` |
-| `dates_text` | yes | `"Friday 12 — Tuesday 16 March"` |
+| `dates_text` | yes | `"Friday 12 to Tuesday 16 March"` |
 | `description` | no | Meta description |
 | `facts` | no | Cover grid, two columns. Keep **Arrive and Depart adjacent** so they sit on one row. `[{label, value, detail?, wide?}]`. Usual set: Travellers, Base, Arrive, Depart, Currency (`wide: true`) |
 | `base_id` | yes | Place id of the hotel. Shown as the "H" pin; every day route starts and ends there |
@@ -30,6 +30,7 @@ home-currency amount automatically wherever it sees the trip's `currency.symbol`
 | `deadlines` | no | Drives the countdown line on the cover |
 | `days` | yes | See below |
 | `notes` | no | `[{title, text}]` practical notes |
+| `cards` | no | Show-this cards in the local language: a food card for staff and a hotel card for drivers. See below |
 
 ## areas
 
@@ -58,6 +59,8 @@ home-currency amount automatically wherever it sees the trip's `currency.symbol`
 - `q`: the Google Maps search string. Include the branch or neighbourhood so the right location opens. The local-language name often works best for small shops.
 - `note`: address · the one thing to know (hours, cash only, line, reservation).
 - `approx`: true when the coordinates are estimated rather than geocoded.
+- `badge` (optional): a few words on how the traveller knows the place, shown next to its name in the area guide and the timeline. Use the user's own words, for example `"My favourite"`, `"On my list"` (they haven't been yet), `"Friends' pick"`, `"Michelin star"`. Leave it off most places, because a badge on everything means nothing.
+- `maps_url` (optional): the user's own Google Maps link for the place (a `maps.app.goo.gl` share link or a `google.com/maps` URL). When set, tapping the place opens it instead of a search by `q`. Use it only for Google Maps links; put a restaurant's own website in the `note`. The build warns about non-map links, and `--check-links` opens each one to catch dead links.
 
 ## days
 
@@ -107,6 +110,36 @@ home-currency amount automatically wherever it sees the trip's `currency.symbol`
 - `priority` and `walkin` cards with an `opens` line get a tick box. Walk-in cards usually omit `opens`.
 - `confirmed`: bookings the user has told you are made. They render ticked and locked for everyone. Per-phone ticks cover the rest.
 - `costs.pp`: a number in local currency, per person. The table shows per person and for the party, each with the home-currency amount.
+
+## cards
+
+Full-screen cards the traveller shows to someone who doesn't read English. They open from buttons at the start of the sticky bar, so they're one tap away anywhere on the page.
+
+```json
+"cards": {
+  "lang": "ja",
+  "food": {
+    "people": [
+      {"who": "Alex", "local": "ピーナッツとごまのアレルギーがあります。ごま油もだめです。",
+       "local2": "醤油、味噌、魚介類は大丈夫です。",
+       "en": "Allergic to peanuts and sesame, including sesame oil. Soy sauce, miso and seafood are fine."}
+    ],
+    "footer": {"local": "シェフにお伝えいただけますか。よろしくお願いします。", "en": "Could you please let the chef know? Thank you."}
+  },
+  "driver": {
+    "local": "エースホテル京都までお願いします。",
+    "local_address": "京都市中京区車屋町245-2 新風館",
+    "en": "Please take us to Ace Hotel Kyoto, Shin-Puh-Kan, 245-2 Kurumayacho, Nakagyo-ku, Kyoto.",
+    "phone": "+81 ..."
+  }
+}
+```
+
+- `lang`: the language code of the local text (`ja`, `ko`, `th`, `zh-TW`, `vi`...). The phone uses it to pick the right font and line breaks.
+- `food.people`: one entry per person with a restriction. `local` is the large line staff read first: what the person **can't** eat. `local2` (optional) is what they **can** eat, which matters as much, because a kitchen told "seafood allergy" may drop every seafood dish and sauce. `en` says both in English so the traveller can check it.
+- `food.footer`: a polite closing line, such as asking staff to tell the chef.
+- `driver`: the hotel's name and address in the local script. `name` defaults to the base place's name; `phone` adds a Call button; Open in Maps uses the base place.
+- `button` and `label` (optional, on either card) change the button text and the line at the top of the card.
 
 ## deadlines
 
